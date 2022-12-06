@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simulador de Financiamento</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="aplicacao">
+        <header>
+            <h1>Simulador de Financiamento (SAC).</h1>
+            <h2>Sistema de Amortização Constante.</h2>
+        </header>
+
+        <div id="mainContainer">
+            <div id="entradaDados">
+                <div class="dados">
+                    <label>Quanto deseja financiar?</label>
+                    <input id="textoValor" type="number" placeholder="Valor do Financiamento">
+                </div>
+                
+                <div class="dados">
+                    <label>Qual valor da Entrada?</label>
+                    <input id="textoEntrada" type="number" placeholder="Valor da Entrada">
+                </div>
+            
+                <div class="dados">
+                    <label>Informe a Taxa de Juros</label>
+                    <input id="textoTaxaJuros" type="number" placeholder="Taxa de Juros (%) a.m.">
+                </div>
+
+                <div class="dados">
+                    <label>Tempo do Financiamento</label>
+                    <input id="textoPrazo" type="number" placeholder="Prazo (em meses)">
+                </div>
+            </div>
+            <div id="carencia">
+                <div>
+                    <input id="comCarencia" type="checkbox">
+                    <label for="comCarencia">Carência?</label>
+                </div>
+                <select id="listaSuspensa">
+                    <option value="0"></option>
+                    <option value="2">2 meses</option>
+                    <option value="3">3 meses</option>
+                    <option value="4">4 meses</option>
+                    <option value="5">5 meses</option>
+                    <option value="6">6 meses</option>
+                </select>
+            </div>
+            <button id="botaoCalcular" class="cta" type="button">Calcular</button>
+        </div>
+    </section>
+
+    <section id="resultados">
+        <table id="tabelaCompleta">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Valor da Parcela</th>
+                    <th>Amortização</th>
+                    <th>Juros</th>
+                    <th>Saldo Devedor</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
+                <!-- Elementos inseridos no JavaScript -->
+            </tbody>
+        
+        </table>
+        <button id="botaoSimulacao" class="cta" type="button">Nova Simulação</button>
+    </section>
+<script type="module" src="./scripts/script.js"></script>
+</body>
+</html>

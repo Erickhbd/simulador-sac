@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+    font: inherit;
+}
+
+html {
+    color: #ffffff;
+    font-size: 10px;
+}
+
+body {
+    font: 11pt tahoma;
+    min-height:100vh;
+    min-width: 100vw;
+    position: relative;
+    background-color: #000000;
+}
+
+body::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(https://www.portalmouralacerda.com.br/wp-content/uploads/2017/03/53211_abb9_25-750x400.jpg); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    opacity: .3;   
+}
+
+h1 {
+    color: #0414f5;
+    text-shadow: 2px 1px rgba(255, 255, 255, 0.2);
+}
+
+#aplicacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aplicacao header {
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.6);
+    margin-top: 50px;
+    margin-bottom: 25px;
+    max-width: 80%;
+}
+
+#aplicacao header h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+#aplicacao header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#entradaDados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 49%;
+}
+
+.dados label{
+    font-size: 1.2em;
+    text-shadow: 1px 1.5px #000000;
+    padding-bottom: 0.3em;
+    padding-left: 0.2em;
+}
+
+.dados input {
+    border: solid #808080 1px;
+    border-radius: 3px;
+    box-shadow: 3px 2px #808080;
+    padding: 15px 10px;
+    font-size: 1.3em;
+}
+
+.dados input::placeholder {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#carencia {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+#carencia div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 1.3em;
+    text-shadow: 1px 1.5px #000000;
+}
+
+#carencia label {
+    padding: 5px;
+}
+#listaSuspensa {
+    visibility: hidden;
+    width: 49%;
+    border: solid #808080 1px;
+    border-radius: 3px;
+    box-shadow: 2px 1 px #808080;
+    font-size: 1.2em;
+}
+
+.cta {
+    font-size: 2em;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 2px 1px #808080;
+    min-width: 75%;
+    margin: auto;
+    border: solid #808080 1px;
+    border-radius: 10px;
+    box-shadow: 3px 2px #808080;
+    background-color: #0414f5;
+    padding: 5px auto;
+}
+
+#resultados {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#tabelaCompleta, 
+thead {
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+    min-width: 75%;
+}
+
+#tabelaCompleta th, td {
+    padding: 5px 35px;    
+    font-size: 1.2em;
+    font-weight: 600;
+    text-shadow: 1px 1px rgb(100, 100, 100);
+}
+
+#tabelaCompleta tr:nth-child(even) {
+    background-color: #808080;
+}
+
+#botaosimulacao {
+    margin: 50px 0px;
+}
+
+@media only screen and (max-width: 1023px){
+    html {
+        font-size: 8px;
+    }
+    #mainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #entradaDados {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .dados {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    #carencia {
+        font: 0.5em;
+        justify-content: center;
+        align-items: center;
+    }
+    #listaSuspensa {
+        width: 45%;
+        margin-left: 5px;
+    }
+    #tabelaCompleta {
+        padding: auto auto;
+        min-width: 80%;
+    }
+}
+
